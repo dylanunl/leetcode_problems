@@ -1,6 +1,6 @@
-###approach 1
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    ###approach 1
+    def containsDuplicate(self, nums):
         """
         用enumerate的function把list里的element都存到dict里，如果已经存在于dict就是有重复，遍历完一遍都没有重复就返回False
         """
@@ -13,8 +13,7 @@ class Solution:
         return False
 
 ###approach 2
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate2(self, nums):
         """
         用collection里的Counter，数完之后用.values()来判定是否有出现次数大于等于2
         """
@@ -27,8 +26,7 @@ class Solution:
         return False
 
 ###approach 3
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate3(self, nums):
         """
         用set来比较nums的长度
         """
@@ -37,8 +35,7 @@ class Solution:
         return True
 
 ###approach 4
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+    def containsDuplicate4(self, nums):
         """
         先排序，然后做对比
         """
@@ -54,3 +51,6 @@ class Solution:
 #                 return True
         
 #         return False
+test = Solution()
+nums = [1,2,3]
+print(test.containsDuplicate(nums))

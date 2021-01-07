@@ -1,6 +1,6 @@
 class Solution:
     ###approach 1
-    def moveZeroes(self, nums: List[int]) -> None:
+    def moveZeroes(self, nums):
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -21,7 +21,7 @@ class Solution:
             nums[i] = 0
 
     ###approach 2
-    def moveZeroes2(self, nums: List[int]) -> None:
+    def moveZeroes2(self, nums):
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -37,7 +37,7 @@ class Solution:
             nums[i] = 0
 
     ###approach 3
-    def moveZeroes3(self, nums: List[int]) -> None:
+    def moveZeroes3(self, nums):
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -51,7 +51,7 @@ class Solution:
 
     
     ###approach 4
-    def moveZeroes4(self, nums: List[int]) -> None:
+    def moveZeroes4(self, nums):
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -66,7 +66,7 @@ class Solution:
 
 
     ###approach 5
-    def moveZeroes4(self, nums: List[int]) -> None:
+    def moveZeroes5(self, nums):
         """
         Do not return anything, modify nums in-place instead.
         """
@@ -78,6 +78,10 @@ class Solution:
             if num != 0:
                 if i!= k:
                     nums[i],nums[k] = nums[k],nums[i]
-                    k+=1
+                k+=1
                     
 
+move = Solution()
+nums=[1,0,0,2,3]
+move.moveZeroes4(nums)
+print(nums)
